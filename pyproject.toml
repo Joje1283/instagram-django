@@ -11,6 +11,7 @@ gunicorn = {version = "^20.1.0", extras = ["production"]}
 uvicorn = {extras = ["production"], version = "^0.17.4"}
 
 [tool.poetry.dev-dependencies]
+django-debug-toolbar = "^3.2.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
