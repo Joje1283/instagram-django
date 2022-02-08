@@ -10,6 +10,7 @@ Django = "^4.0.2"
 gunicorn = {version = "^20.1.0", extras = ["production"]}
 uvicorn = {extras = ["production"], version = "^0.17.4"}
 djangorestframework = "^3.13.1"
+Pillow = "^9.0.1"
 
 [tool.poetry.dev-dependencies]
 django-debug-toolbar = "^3.2.4"

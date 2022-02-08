@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     # Third App
     'rest_framework',
     # Local App
+    'core',
     'accounts',
+    'posts',
 ]
 
 MIDDLEWARE = [
