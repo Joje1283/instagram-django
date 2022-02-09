@@ -1,12 +1,10 @@
-import re
 import logging
 
 from django.contrib.auth import get_user_model
-from django.conf import settings
 
 from rest_framework import serializers
 
-from .models import Post, Comment, Tag
+from .models import Post, Comment
 
 logger = logging.getLogger('django')
 
