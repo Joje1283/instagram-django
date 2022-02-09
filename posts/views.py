@@ -8,6 +8,7 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.decorators import action
 from rest_framework.generics import get_object_or_404
+from rest_framework.permissions import IsAuthenticated
 
 from .models import Post, Comment, Tag
 from .serializers import PostSerializer, CommentSerializer
@@ -18,6 +19,7 @@ logger = logging.getLogger('django')
 class PostViewSet(ModelViewSet):
     queryset = Post.objects.all().select_related('author').prefetch_related('tag_set', 'like_user_set')
     serializer_class = PostSerializer
+    permission_classes = [IsAuthenticated]
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
