@@ -12,3 +12,7 @@ INTERNAL_IPS = [
 
 REST_FRAMEWORK['DEFAULT_PERMISSION_CLASSES'] = ['rest_framework.permissions.AllowAny']
 REST_FRAMEWORK['DEFAULT_AUTHENTICATION_CLASSES'] += ['rest_framework.authentication.SessionAuthentication']
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:3000",
+]
